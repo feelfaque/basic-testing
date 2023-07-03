@@ -44,18 +44,12 @@ describe('simpleCalculator tests', () => {
   });
 
   test('should return null for invalid action', () => {
-    const input = {
-      data: { a: 18, b: 3, action: Action },
-      result: null,
-    };
-    expect(simpleCalculator(input.data)).toBe(input.result);
+    const input = { a: 18, b: 3, action: Action };
+    expect(simpleCalculator(input)).toBeNull();
   });
 
   test('should return null for invalid arguments', () => {
-    const input = {
-      data: { a: 'eighteen', b: 3, action: Action.Multiply },
-      result: null,
-    };
-    expect(simpleCalculator(input.data)).toBe(input.result);
+    const input = { a: 'eighteen', b: 3, action: Action.Multiply };
+    expect(simpleCalculator(input)).toBeNull();
   });
 });
